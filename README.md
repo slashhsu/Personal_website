@@ -4,6 +4,11 @@ A professional portfolio presenting Han-Ling Hsu’s product, growth, and analyt
 
 Built with Next.js, TypeScript, and plain CSS. The site is self-contained and ready to deploy on Vercel.
 
+The homepage uses server-rendered content and a CSS-first impact journey, so the
+story remains readable, searchable, and accessible without client-side JavaScript.
+Supported browsers receive subtle scroll-linked progress and scene transitions;
+reduced-motion visitors receive the complete static layout.
+
 ## Local development
 
 From this directory:
@@ -41,7 +46,7 @@ npm run start
 ## Deploy to Vercel
 
 1. Import the repository into Vercel.
-2. Set **Root Directory** to `han-ling-portfolio`.
+2. Leave **Root Directory** at the repository root.
 3. Confirm the **Framework Preset** is **Next.js**.
 4. Optionally add `NEXT_PUBLIC_SITE_URL` with the final public URL, such as `https://your-domain.com`, for canonical metadata.
 5. Deploy.
@@ -52,4 +57,4 @@ Replace `public/profile.jpg` with an approved, professional square headshot. Kee
 
 ## Privacy and deployment scope
 
-Deploy only the `han-ling-portfolio` subdirectory. Never include files from the parent workspace—especially CV source files, tokens, environment secrets, databases, or other private application materials.
+Deploy this repository only. Never add files from the original parent workspace—especially CV source files, tokens, environment secrets, databases, or other private application materials.

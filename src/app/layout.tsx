@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "Han-Ling Hsu",
     images: [
       {
-        url: "/og.png",
+        url: "/og-scroll.png",
         width: 1200,
         height: 630,
         alt: "Han-Ling Hsu — Product & Growth Analytics",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Han-Ling Hsu | Product & Growth Analytics",
     description:
       "I turn behavioural data into product decisions that compound.",
-    images: ["/og.png"],
+    images: ["/og-scroll.png"],
   },
   robots: {
     index: true,

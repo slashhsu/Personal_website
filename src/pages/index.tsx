@@ -110,7 +110,7 @@ export default function Home() {
           content="I turn behavioural data into product decisions that compound."
         />
         <meta property="og:site_name" content="Han-Ling Hsu" />
-        <meta property="og:image" content={`${siteUrl}/og.png`} />
+        <meta property="og:image" content={`${siteUrl}/og-scroll.png`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
@@ -127,7 +127,7 @@ export default function Home() {
           name="twitter:description"
           content="I turn behavioural data into product decisions that compound."
         />
-        <meta name="twitter:image" content={`${siteUrl}/og.png`} />
+        <meta name="twitter:image" content={`${siteUrl}/og-scroll.png`} />
         <meta
           name="twitter:image:alt"
           content="Han-Ling Hsu — Product & Growth Analytics"
@@ -160,11 +160,8 @@ export default function Home() {
             ))}
           </nav>
 
-          <a
-            className="nav-cta"
-            href="mailto:hanlinghsu300@gmail.com?subject=Portfolio%20enquiry"
-          >
-            Let&apos;s talk <span aria-hidden="true">↗</span>
+          <a className="nav-cta" href="#contact">
+            Let&apos;s talk <span aria-hidden="true">↓</span>
           </a>
 
           <details className="mobile-menu">
@@ -175,12 +172,13 @@ export default function Home() {
                   {item.label} <span aria-hidden="true">↘</span>
                 </a>
               ))}
-              <a href="mailto:hanlinghsu300@gmail.com?subject=Portfolio%20enquiry">
-                Email me <span aria-hidden="true">↗</span>
+              <a href="#contact">
+                Let&apos;s talk <span aria-hidden="true">↓</span>
               </a>
             </nav>
           </details>
         </div>
+        <span className="page-progress" aria-hidden="true" />
       </header>
 
       <main id="main-content">
@@ -203,12 +201,9 @@ export default function Home() {
               <a className="button button-primary" href="#impact">
                 Explore my impact <span className="arrow" aria-hidden="true">↓</span>
               </a>
-              <a
-                className="button button-secondary"
-                href="mailto:hanlinghsu300@gmail.com?subject=Portfolio%20enquiry"
-              >
+              <a className="button button-secondary" href="#contact">
                 Start a conversation{" "}
-                <span className="arrow" aria-hidden="true">↗</span>
+                <span className="arrow" aria-hidden="true">↓</span>
               </a>
             </div>
             <div className="hero-proof" aria-label="Experience focus">
@@ -299,7 +294,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="case-studies section" aria-labelledby="work-heading">
+        <section
+          className="case-studies section"
+          id="work"
+          aria-labelledby="work-heading"
+        >
           <div className="shell">
             <div className="section-intro">
               <div>
@@ -315,37 +314,94 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="case-list">
-              {caseStudies.map((study) => (
-                <article className="case-card" key={study.number}>
-                  <span className="case-number" aria-hidden="true">
-                    {study.number}
-                  </span>
-                  <div>
-                    <span className="case-category">{study.category}</span>
-                    <h3>{study.title}</h3>
+            <div className="impact-journey">
+              <aside className="journey-stage">
+                <div className="journey-panel">
+                  <div className="journey-panel-head">
+                    <span>Decision route</span>
+                    <span>01—03</span>
                   </div>
-                  <div>
-                    <p className="case-summary">{study.summary}</p>
-                    <div className="case-metrics">
-                      {study.metrics.map((metric) => (
-                        <div
-                          className="case-metric"
-                          key={`${metric.value}-${metric.label}`}
-                        >
-                          <strong>{metric.value}</strong>
-                          <span>{metric.label}</span>
-                        </div>
+
+                  <div className="journey-orbit" aria-hidden="true">
+                    <span className="journey-ring journey-ring-outer" />
+                    <span className="journey-ring journey-ring-inner" />
+                    <span className="journey-axis journey-axis-horizontal" />
+                    <span className="journey-axis journey-axis-vertical" />
+                    <span className="journey-core">
+                      <small>Evidence</small>
+                      <strong>Decision</strong>
+                    </span>
+                    {caseStudies.map((study, index) => (
+                      <span
+                        className={`journey-node journey-node-${index + 1}`}
+                        key={study.number}
+                      >
+                        <strong>{study.metrics[0].value}</strong>
+                        <small>{study.category}</small>
+                      </span>
+                    ))}
+                  </div>
+
+                  <nav
+                    className="journey-route"
+                    aria-label="Selected impact journey"
+                  >
+                    <ol>
+                      {caseStudies.map((study) => (
+                        <li key={study.number}>
+                          <a href={`#impact-story-${study.number}`}>
+                            <span>{study.number}</span>
+                            {study.category}
+                          </a>
+                        </li>
                       ))}
+                    </ol>
+                  </nav>
+
+                  <p className="journey-cue">
+                    <span aria-hidden="true" />
+                    Scroll through the evidence
+                  </p>
+                </div>
+              </aside>
+
+              <div className="case-list">
+                {caseStudies.map((study) => (
+                  <article
+                    className="case-card"
+                    id={`impact-story-${study.number}`}
+                    key={study.number}
+                  >
+                    <span className="case-card-progress" aria-hidden="true" />
+                    <span className="case-number" aria-hidden="true">
+                      {study.number}
+                    </span>
+                    <div>
+                      <span className="case-category">{study.category}</span>
+                      <h3>{study.title}</h3>
                     </div>
-                    <ul className="tag-list" aria-label="Capabilities used">
-                      {study.capabilities.map((capability) => (
-                        <li key={capability}>{capability}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-              ))}
+                    <div>
+                      <p className="case-summary">{study.summary}</p>
+                      <div className="case-metrics">
+                        {study.metrics.map((metric) => (
+                          <div
+                            className="case-metric"
+                            key={`${metric.value}-${metric.label}`}
+                          >
+                            <strong>{metric.value}</strong>
+                            <span>{metric.label}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <ul className="tag-list" aria-label="Capabilities used">
+                        {study.capabilities.map((capability) => (
+                          <li key={capability}>{capability}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
