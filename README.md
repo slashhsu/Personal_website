@@ -53,7 +53,10 @@ npm run start
 
 ## Profile photo
 
-Replace `public/profile.jpg` with an approved, professional square headshot. Keep the same filename so no code changes are required.
+The homepage uses `public/profile-cutout.webp`, a transparent portrait cutout.
+Replace that file with an approved transparent WebP using the same filename so
+no code changes are required. The original `public/profile.jpg` is retained as
+the source photograph.
 
 ## Privacy and deployment scope
 

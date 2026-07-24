@@ -450,7 +450,7 @@ summary:focus-visible {
   position: relative;
   overflow: hidden;
   aspect-ratio: 4 / 5;
-  background: var(--gold-light);
+  background: transparent;
   border: 1px solid rgba(16, 34, 49, 0.1);
   border-radius: 15rem 15rem 1.5rem 1.5rem;
   box-shadow: var(--shadow);
@@ -458,7 +458,7 @@ summary:focus-visible {
 
 .portrait-frame img {
   object-fit: cover;
-  object-position: 50% 46%;
+  object-position: 50% 50%;
   transform: scale(1.02);
 }
 

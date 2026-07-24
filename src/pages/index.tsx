@@ -45,7 +45,7 @@ const structuredData = {
   "@type": "Person",
   name: "Han-Ling Hsu",
   url: siteUrl,
-  image: `${siteUrl}/profile.jpg`,
+  image: `${siteUrl}/profile-cutout.webp`,
   jobTitle: "Product & Growth Analytics Lead",
   email: "mailto:hanlinghsu300@gmail.com",
   address: {
@@ -216,8 +216,8 @@ export default function Home() {
           <div className="portrait-wrap">
             <div className="portrait-frame">
               <Image
-                src="/profile.jpg"
-                alt="Han-Ling Hsu outdoors in a winter landscape"
+                src="/profile-cutout.webp"
+                alt="Portrait of Han-Ling Hsu"
                 fill
                 priority
                 sizes="(max-width: 980px) 78vw, 38vw"
