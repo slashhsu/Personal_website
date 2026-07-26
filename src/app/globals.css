@@ -1077,7 +1077,7 @@ summary:focus-visible {
   display: grid;
   overflow: hidden;
   min-height: min(72svh, 44rem);
-  grid-template-columns: 3.2rem minmax(12rem, 0.62fr) minmax(17rem, 1fr);
+  grid-template-columns: 3.2rem minmax(0, 1fr);
   gap: clamp(1.25rem, 3vw, 2.8rem);
   align-content: center;
   padding: clamp(2rem, 4vw, 3.25rem);
@@ -1085,6 +1085,14 @@ summary:focus-visible {
   border: 1px solid var(--line);
   border-radius: 1.35rem;
   scroll-margin-top: 6.5rem;
+}
+
+.case-card > div {
+  min-width: 0;
+}
+
+.case-card > div:last-child {
+  grid-column: 2;
 }
 
 .case-card-progress {
@@ -1118,8 +1126,11 @@ summary:focus-visible {
   font-family: var(--font-newsreader), Georgia, serif;
   font-size: clamp(2rem, 3.3vw, 3.35rem);
   font-weight: 460;
+  hyphens: auto;
   letter-spacing: -0.045em;
   line-height: 1;
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 .case-summary {
@@ -1837,7 +1848,7 @@ summary:focus-visible {
 
   .case-card {
     min-height: 0;
-    grid-template-columns: 3rem minmax(13rem, 0.55fr) minmax(0, 1fr);
+    grid-template-columns: 3rem minmax(0, 1fr);
     gap: 1.5rem;
   }
 
@@ -1926,6 +1937,10 @@ summary:focus-visible {
 
   .case-card {
     grid-template-columns: 1fr;
+  }
+
+  .case-card > div:last-child {
+    grid-column: 1;
   }
 
   .journey-route ol {
