@@ -2,6 +2,10 @@ import type { PageConfig } from "next";
 import Image from "next/image";
 import Head from "next/head";
 import {
+  MicroLink,
+  SignalPulse,
+} from "@/components/amicro/MicroPrimitives";
+import {
   caseStudies,
   credentials,
   education,
@@ -11,6 +15,7 @@ import {
   projects,
   skillGroups,
 } from "@/data/portfolio";
+import { microInteractionsScript } from "@/lib/micro-interactions";
 import { siteUrl } from "@/lib/site-url";
 
 const contactLinks = [
@@ -160,9 +165,9 @@ export default function Home() {
             ))}
           </nav>
 
-          <a className="nav-cta" href="#contact">
-            Let&apos;s talk <span aria-hidden="true">↓</span>
-          </a>
+          <MicroLink className="nav-cta" href="#contact" icon="↓">
+            Let&apos;s talk
+          </MicroLink>
 
           <details className="mobile-menu">
             <summary>Menu</summary>
@@ -198,13 +203,20 @@ export default function Home() {
               analytics to measurable growth.
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#impact">
-                Explore my impact <span className="arrow" aria-hidden="true">↓</span>
-              </a>
-              <a className="button button-secondary" href="#contact">
-                Start a conversation{" "}
-                <span className="arrow" aria-hidden="true">↓</span>
-              </a>
+              <MicroLink
+                className="button button-primary"
+                href="#impact"
+                icon="↓"
+              >
+                Explore my impact
+              </MicroLink>
+              <MicroLink
+                className="button button-secondary"
+                href="#contact"
+                icon="↓"
+              >
+                Start a conversation
+              </MicroLink>
             </div>
             <div className="hero-proof" aria-label="Experience focus">
               <span>Consumer products</span>
@@ -213,7 +225,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="portrait-wrap">
+          <div
+            className="portrait-wrap micro-portrait"
+            data-tilt
+            data-tilt-flat
+            data-tilt-strength="1.5"
+          >
             <div className="portrait-frame">
               <Image
                 src="/profile-cutout.webp"
@@ -253,6 +270,7 @@ export default function Home() {
                   <strong className="metric-value">{metric.value}</strong>
                   <span className="metric-label">{metric.label}</span>
                   <p>{metric.detail}</p>
+                  <SignalPulse />
                 </article>
               ))}
             </div>
@@ -490,28 +508,41 @@ export default function Home() {
             <div className="project-grid">
               {projects.map((project, index) => (
                 <a
-                  className="project-card"
+                  className="project-card micro-tilt-surface"
+                  data-tilt
+                  data-tilt-strength="2.5"
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   key={project.title}
                 >
-                  <span className="project-index">
-                    0{index + 1}
-                    <span aria-hidden="true">↗</span>
-                  </span>
-                  <h3>
-                    {project.title}
-                    <span className="sr-only">
-                      , view project on GitHub (opens in a new tab)
+                  <span
+                    className="micro-card-glow micro-card-glow-ivory"
+                    aria-hidden="true"
+                  />
+                  <div className="micro-card-content">
+                    <span className="project-index">
+                      0{index + 1}
+                      <span className="project-arrow" aria-hidden="true">
+                        <span className="project-arrow-track">
+                          <span>↗</span>
+                          <span>↗</span>
+                        </span>
+                      </span>
                     </span>
-                  </h3>
-                  <p>{project.description}</p>
-                  <ul className="tag-list" aria-label="Project technologies">
-                    {project.tags.map((tag) => (
-                      <li key={tag}>{tag}</li>
-                    ))}
-                  </ul>
+                    <h3>
+                      {project.title}
+                      <span className="sr-only">
+                        , view project on GitHub (opens in a new tab)
+                      </span>
+                    </h3>
+                    <p>{project.description}</p>
+                    <ul className="tag-list" aria-label="Project technologies">
+                      {project.tags.map((tag) => (
+                        <li key={tag}>{tag}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </a>
               ))}
             </div>
@@ -583,22 +614,24 @@ export default function Home() {
               </p>
             </div>
             <div className="contact-links">
-              <a
+              <MicroLink
                 className="button button-primary"
                 href="mailto:hanlinghsu300@gmail.com?subject=Portfolio%20enquiry"
+                icon="↗"
               >
-                hanlinghsu300@gmail.com <span aria-hidden="true">↗</span>
-              </a>
+                hanlinghsu300@gmail.com
+              </MicroLink>
               {contactLinks.map((link) => (
-                <a
+                <MicroLink
                   className="button"
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   key={link.label}
+                  icon="↗"
                 >
-                  {link.label} <span aria-hidden="true">↗</span>
-                </a>
+                  {link.label}
+                </MicroLink>
               ))}
             </div>
           </div>
@@ -615,6 +648,9 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        dangerouslySetInnerHTML={{ __html: microInteractionsScript }}
       />
     </>
   );

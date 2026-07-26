@@ -58,6 +58,13 @@ Replace that file with an approved transparent WebP using the same filename so
 no code changes are required. The original `public/profile.jpg` is retained as
 the source photograph.
 
+## Interaction system
+
+The portfolio uses a custom navy, ivory and gold motion language adapted from
+Amicro: spring-inspired magnetic links, pointer-responsive cards and portrait
+depth, icon swaps, and reduced-motion fallbacks. See
+`THIRD_PARTY_NOTICES.md` for attribution.
+
 ## Privacy and deployment scope
 
 Deploy this repository only. Never add files from the original parent workspace—especially CV source files, tokens, environment secrets, databases, or other private application materials.
