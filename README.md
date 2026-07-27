@@ -4,6 +4,11 @@ A professional portfolio presenting Han-Ling Hsu’s product, growth, and analyt
 
 Built with Next.js, TypeScript, and plain CSS. The site is self-contained and ready to deploy on Vercel.
 
+The homepage uses server-rendered content and a CSS-first impact journey, so the
+story remains readable, searchable, and accessible without client-side JavaScript.
+Supported browsers receive subtle scroll-linked progress and scene transitions;
+reduced-motion visitors receive the complete static layout.
+
 ## Local development
 
 From this directory:
@@ -41,15 +46,25 @@ npm run start
 ## Deploy to Vercel
 
 1. Import the repository into Vercel.
-2. Set **Root Directory** to `han-ling-portfolio`.
+2. Leave **Root Directory** at the repository root.
 3. Confirm the **Framework Preset** is **Next.js**.
 4. Optionally add `NEXT_PUBLIC_SITE_URL` with the final public URL, such as `https://your-domain.com`, for canonical metadata.
 5. Deploy.
 
 ## Profile photo
 
-Replace `public/profile.jpg` with an approved, professional square headshot. Keep the same filename so no code changes are required.
+The homepage uses `public/profile-cutout.webp`, a transparent portrait cutout.
+Replace that file with an approved transparent WebP using the same filename so
+no code changes are required. The original `public/profile.jpg` is retained as
+the source photograph.
+
+## Interaction system
+
+The portfolio uses a custom navy, ivory and gold motion language adapted from
+Amicro: spring-inspired magnetic links, pointer-responsive cards and portrait
+depth, icon swaps, and reduced-motion fallbacks. See
+`THIRD_PARTY_NOTICES.md` for attribution.
 
 ## Privacy and deployment scope
 
-Deploy only the `han-ling-portfolio` subdirectory. Never include files from the parent workspace—especially CV source files, tokens, environment secrets, databases, or other private application materials.
+Deploy this repository only. Never add files from the original parent workspace—especially CV source files, tokens, environment secrets, databases, or other private application materials.
