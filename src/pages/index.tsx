@@ -29,19 +29,34 @@ const contactLinks = [
 
 const workPrinciples = [
   {
-    title: "Start with the decision",
+    title: "Business problem",
     description:
-      "Define the product or commercial choice first, then work backwards to the evidence that will genuinely change it.",
+      "Start with the customer or commercial tension, who it affects and why resolving it matters now.",
   },
   {
-    title: "Build a shared measurement language",
+    title: "Analytical question",
     description:
-      "Create KPIs, event frameworks and reporting rhythms that product, engineering and growth teams can trust together.",
+      "Turn a broad concern into a question that data can answer and a decision the team can actually make.",
   },
   {
-    title: "Turn analysis into momentum",
+    title: "Method and judgement",
     description:
-      "Translate complex behaviour into clear recommendations, practical experiments and an honest view of what to do next.",
+      "Choose evidence and methods that fit the question, then make assumptions, limitations and trade-offs visible.",
+  },
+  {
+    title: "Team action",
+    description:
+      "Translate the signal into a practical recommendation, test or priority that product, engineering and growth can own together.",
+  },
+  {
+    title: "Evaluation",
+    description:
+      "Agree on the outcome and guardrails before reviewing the result, then separate contribution from unsupported causality.",
+  },
+  {
+    title: "Learning and next step",
+    description:
+      "Capture what changed, what remains uncertain and which follow-up would make the next decision stronger.",
   },
 ];
 
@@ -51,7 +66,7 @@ const structuredData = {
   name: "Han-Ling Hsu",
   url: siteUrl,
   image: `${siteUrl}/profile-cutout.webp`,
-  jobTitle: "Product & Growth Analytics Lead",
+  jobTitle: "Product Analytics Lead",
   email: "mailto:hanlinghsu300@gmail.com",
   address: {
     "@type": "PostalAddress",
@@ -88,10 +103,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Han-Ling Hsu | Product &amp; Growth Analytics</title>
+        <title>Han-Ling Hsu | Product Analytics Lead</title>
         <meta
           name="description"
-          content="Product and growth analytics leader in London, turning behavioural data into confident product decisions and measurable growth."
+          content="Product Analytics Lead in London turning user behaviour, experimentation and reliable measurement into evidence teams can act on."
         />
         <meta
           name="keywords"
@@ -108,34 +123,34 @@ export default function Home() {
         <meta property="og:url" content={`${siteUrl}/`} />
         <meta
           property="og:title"
-          content="Han-Ling Hsu | Product & Growth Analytics"
+          content="Han-Ling Hsu | Product Analytics Lead"
         />
         <meta
           property="og:description"
-          content="I turn behavioural data into product decisions that compound."
+          content="I turn product questions into evidence teams can act on."
         />
         <meta property="og:site_name" content="Han-Ling Hsu" />
-        <meta property="og:image" content={`${siteUrl}/og-scroll.png`} />
+        <meta property="og:image" content={`${siteUrl}/og-decision.png`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="Han-Ling Hsu — Product & Growth Analytics"
+          content="Han-Ling Hsu — Product Analytics Lead"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Han-Ling Hsu | Product & Growth Analytics"
+          content="Han-Ling Hsu | Product Analytics Lead"
         />
         <meta
           name="twitter:description"
-          content="I turn behavioural data into product decisions that compound."
+          content="I turn product questions into evidence teams can act on."
         />
-        <meta name="twitter:image" content={`${siteUrl}/og-scroll.png`} />
+        <meta name="twitter:image" content={`${siteUrl}/og-decision.png`} />
         <meta
           name="twitter:image:alt"
-          content="Han-Ling Hsu — Product & Growth Analytics"
+          content="Han-Ling Hsu — Product Analytics Lead"
         />
       </Head>
 
@@ -191,37 +206,36 @@ export default function Home() {
           <div className="hero-copy">
             <p className="hero-role">
               <span className="hero-role-dot" aria-hidden="true" />
-              Product &amp; Growth Analytics Lead · London
+              Product Analytics Lead · London, UK
             </p>
             <h1 id="hero-title">
-              I turn behavioural data into <em>product decisions</em> that
-              compound.
+              I turn product questions into <em>evidence</em> teams can act on.
             </h1>
             <p className="hero-lede">
-              With 5+ years across consumer apps, manufacturing and data
-              science, I connect strategy, experimentation and scalable
-              analytics to measurable growth.
+              Across consumer apps and complex operations, I connect user
+              behaviour, experimentation and reliable measurement to clearer
+              priorities and measurable growth.
             </p>
             <div className="hero-actions">
               <MicroLink
                 className="button button-primary"
-                href="#impact"
+                href="#work"
                 icon="↓"
               >
-                Explore my impact
+                View decision stories
               </MicroLink>
               <MicroLink
                 className="button button-secondary"
-                href="#contact"
-                icon="↓"
+                href="mailto:hanlinghsu300@gmail.com?subject=Product%20analytics%20conversation"
+                icon="↗"
               >
-                Start a conversation
+                Email me
               </MicroLink>
             </div>
             <div className="hero-proof" aria-label="Experience focus">
-              <span>Consumer products</span>
-              <span>Growth systems</span>
+              <span>User behaviour</span>
               <span>Experimentation</span>
+              <span>Decision systems</span>
             </div>
           </div>
 
@@ -241,7 +255,7 @@ export default function Home() {
               />
             </div>
             <p className="portrait-note">
-              Product thinking, backed by evidence.
+              Product decisions, backed by evidence.
               <small>London · United Kingdom</small>
             </p>
           </div>
@@ -255,12 +269,13 @@ export default function Home() {
           <div className="shell">
             <div className="impact-header">
               <div>
-                <p className="section-kicker">Impact in numbers</p>
-                <h2 id="impact-heading">Evidence over theatre.</h2>
+                <p className="section-kicker">Outcomes in context</p>
+                <h2 id="impact-heading">Evidence, with ownership.</h2>
               </div>
               <p>
-                The work matters when the numbers move—and when teams understand
-                why they moved.
+                These results came from cross-functional work. My role was to
+                make the problem measurable, clarify the evidence and help the
+                team choose what to do next.
               </p>
             </div>
 
@@ -284,15 +299,14 @@ export default function Home() {
         >
           <div className="shell about-grid">
             <div className="about-statement">
-              <p className="section-kicker">How I work</p>
+              <p className="section-kicker">Decision framework</p>
               <h2 id="about-heading">
-                The best analytics does more than explain the past. It gives a
-                team the <em>confidence to act.</em>
+                Analysis earns its value when it <em>changes a decision.</em>
               </h2>
               <p>
-                I work at the intersection of product, data and growth—close
-                enough to the customer journey to find the signal, and close
-                enough to the business to make it useful.
+                I use the same six anchors from first question to final
+                recommendation, so the method, ownership and limits remain as
+                clear as the outcome.
               </p>
             </div>
 
@@ -320,15 +334,14 @@ export default function Home() {
           <div className="shell">
             <div className="section-intro">
               <div>
-                <p className="section-kicker">Selected impact</p>
+                <p className="section-kicker">Decision stories</p>
                 <h2 className="section-heading" id="work-heading">
-                  From signal to system.
+                  From business tension to measurable action.
                 </h2>
               </div>
               <p>
-                Three examples of the same operating principle: frame the right
-                question, create reliable evidence, then make the next decision
-                easier.
+                Three examples of how I frame the problem, choose the evidence,
+                support a team action and evaluate what changed.
               </p>
             </div>
 
@@ -398,8 +411,51 @@ export default function Home() {
                       <span className="case-category">{study.category}</span>
                       <h3>{study.title}</h3>
                     </div>
-                    <div>
-                      <p className="case-summary">{study.summary}</p>
+                    <div className="case-body">
+                      <div className="case-foundation-grid">
+                        <section className="case-field">
+                          <h4>Business problem</h4>
+                          <p>{study.businessProblem}</p>
+                        </section>
+                        <section className="case-field">
+                          <h4>Analytical question</h4>
+                          <p>{study.analyticalQuestion}</p>
+                        </section>
+                      </div>
+
+                      <section className="case-field case-responsibility">
+                        <h4>My responsibility</h4>
+                        <p>{study.responsibility}</p>
+                      </section>
+
+                      <section className="case-field case-approach">
+                        <h4>Approach</h4>
+                        <ol>
+                          {study.approach.map((step) => (
+                            <li key={step}>{step}</li>
+                          ))}
+                        </ol>
+                      </section>
+
+                      <div className="case-decision-grid">
+                        <section className="case-field">
+                          <h4>Decision or action enabled</h4>
+                          <p>{study.action}</p>
+                        </section>
+                        <section className="case-field case-evaluation">
+                          <h4>Outcome and evaluation</h4>
+                          <p>{study.evaluation}</p>
+                        </section>
+                      </div>
+
+                      <section className="case-learning">
+                        <span aria-hidden="true">↳</span>
+                        <div>
+                          <h4>Learning and next step</h4>
+                          <p>{study.learning}</p>
+                        </div>
+                      </section>
+
                       <div className="case-metrics">
                         {study.metrics.map((metric) => (
                           <div
@@ -411,7 +467,10 @@ export default function Home() {
                           </div>
                         ))}
                       </div>
-                      <ul className="tag-list" aria-label="Capabilities used">
+                      <ul
+                        className="tag-list"
+                        aria-label="Evidence and capabilities used"
+                      >
                         {study.capabilities.map((capability) => (
                           <li key={capability}>{capability}</li>
                         ))}
@@ -433,11 +492,12 @@ export default function Home() {
             <div className="experience-aside">
               <p className="section-kicker">Experience</p>
               <h2 className="section-heading" id="experience-heading">
-                Built across contexts.
+                Evidence translated across products and operations.
               </h2>
               <p>
-                A career spanning consumer technology, high-volume operations
-                and the analytical foundations behind both.
+                Each role strengthened the same discipline: understand the
+                operating problem, work with domain experts and make the next
+                decision easier to defend.
               </p>
             </div>
 
@@ -496,12 +556,13 @@ export default function Home() {
               <div>
                 <p className="section-kicker">Projects</p>
                 <h2 className="section-heading" id="projects-heading">
-                  Curiosity, made useful.
+                  Independent work, framed around decisions.
                 </h2>
               </div>
               <p>
-                Independent work where data science meets a real decision—from
-                player selection to language classification.
+                These projects begin with a practical question, use an
+                appropriate analytical approach and produce something that can
+                support a choice—without inventing commercial impact.
               </p>
             </div>
 
@@ -537,7 +598,10 @@ export default function Home() {
                       </span>
                     </h3>
                     <p>{project.description}</p>
-                    <ul className="tag-list" aria-label="Project technologies">
+                    <ul
+                      className="tag-list"
+                      aria-label="Project methods and tools"
+                    >
                       {project.tags.map((tag) => (
                         <li key={tag}>{tag}</li>
                       ))}
@@ -557,14 +621,14 @@ export default function Home() {
           <div className="shell">
             <div className="section-intro">
               <div>
-                <p className="section-kicker">Capabilities</p>
+                <p className="section-kicker">Capabilities in practice</p>
                 <h2 className="section-heading" id="skills-heading">
-                  Strategy with technical depth.
+                  The toolkit follows the decision.
                 </h2>
               </div>
               <p>
-                A toolkit built to move fluidly from a leadership question to a
-                defensible analysis—and back to a clear recommendation.
+                I choose methods and platforms around the product question,
+                then communicate the evidence at the level each team needs.
               </p>
             </div>
 
@@ -605,18 +669,18 @@ export default function Home() {
             <div>
               <p className="section-kicker">Let&apos;s connect</p>
               <h2 id="contact-heading">
-                Have a decision that needs <em>better evidence?</em>
+                Building a product decision that needs <em>better evidence?</em>
               </h2>
               <p className="contact-copy">
-                I&apos;m always glad to meet people working on ambitious
-                products, thoughtful growth problems and analytics teams that
-                want to raise the quality of their decisions.
+                I&apos;m open to Product Analytics and Senior Product Analyst
+                opportunities in the UK, as well as conversations about growth,
+                experimentation and analytics leadership.
               </p>
             </div>
             <div className="contact-links">
               <MicroLink
                 className="button button-primary"
-                href="mailto:hanlinghsu300@gmail.com?subject=Portfolio%20enquiry"
+                href="mailto:hanlinghsu300@gmail.com?subject=Product%20analytics%20conversation"
                 icon="↗"
               >
                 hanlinghsu300@gmail.com

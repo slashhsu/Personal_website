@@ -18,7 +18,13 @@ export interface CaseStudy {
   number: string;
   category: string;
   title: string;
-  summary: string;
+  businessProblem: string;
+  analyticalQuestion: string;
+  responsibility: string;
+  approach: string[];
+  action: string;
+  evaluation: string;
+  learning: string;
   metrics: CaseStudyMetric[];
   capabilities: string[];
 }
@@ -60,87 +66,128 @@ export interface Credential {
 
 export const navItems: NavItem[] = [
   { label: "About", href: "#about" },
-  { label: "Impact", href: "#impact" },
+  { label: "Decision stories", href: "#work" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
+  { label: "Capabilities", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const impactMetrics: ImpactMetric[] = [
   {
     value: "30K",
-    label: "users acquired",
-    detail: "Built momentum in the first five weeks of a consumer product launch.",
+    label: "user acquisitions",
+    detail: "A team launch outcome achieved within the product's first five weeks.",
   },
   {
     value: "+18%",
     label: "registration uplift",
-    detail: "Improved the journey from first visit to completed registration.",
+    detail: "A journey-analysis and experimentation outcome I helped measure and interpret.",
   },
   {
     value: "-25%",
     label: "cost per acquisition",
-    detail: "Made growth spend work harder through measurement and optimisation.",
+    detail: "Connected channel cost with downstream product behaviour to inform optimisation.",
   },
   {
-    value: "+70%",
-    label: "production yield",
-    detail: "Applied experiment-led analysis to a complex manufacturing process.",
+    value: "+50%",
+    label: "reporting efficiency",
+    detail: "Automated recurring data preparation while improving consistency and visibility.",
   },
 ];
 
 export const caseStudies: CaseStudy[] = [
   {
     number: "01",
-    category: "Product growth",
-    title: "Turning a launch into a measurable growth engine",
-    summary:
-      "Connected acquisition, activation and retention signals to focus the team on the changes with the greatest customer and commercial value.",
-    metrics: [
-      { value: "30K", label: "users in five weeks" },
-      { value: "+18%", label: "registration" },
-      { value: "+12%", label: "key-event engagement" },
-      { value: "-25%", label: "cost per acquisition" },
-      { value: "+23%", label: "one-month retention" },
+    category: "Launch strategy",
+    title: "Creating a measurable launch strategy",
+    businessProblem:
+      "A new social product was approaching launch without a shared definition of success or a clear way to separate acquisition volume from meaningful user value.",
+    analyticalQuestion:
+      "Which early behaviours would show that users were reaching value, and which signals should guide onboarding, roadmap and go-to-market priorities?",
+    responsibility:
+      "I translated user needs and strategic goals into measurable product questions, tracking requirements and decision points for the cross-functional team.",
+    approach: [
+      "Combined recurring user feedback with market research and the early product signals available.",
+      "Mapped acquisition, activation, engagement and retention as distinct stages rather than treating registration as proof of success.",
+      "Aligned product, design, engineering and marketing on measures for the major launch features.",
     ],
+    action:
+      "The framework gave the team a shared basis for prioritising onboarding, core social actions and go-to-market activity while keeping uncertainty visible.",
+    evaluation:
+      "The launch acquired more than 30,000 users in five weeks. I present that as a team outcome to which the analysis and measurement framework contributed.",
+    learning:
+      "In an early-stage product, useful analytics means making assumptions explicit and defining activation and retention early enough to improve the next decision.",
+    metrics: [{ value: "30K", label: "users in five weeks" }],
     capabilities: [
-      "Growth analytics",
-      "Journey optimisation",
-      "Experimentation",
-      "Retention",
+      "Launch measurement",
+      "KPI definition",
+      "Roadmap support",
+      "Cross-functional alignment",
     ],
   },
   {
     number: "02",
-    category: "Measurement systems",
-    title: "Giving teams one dependable view of product performance",
-    summary:
-      "Created a practical measurement rhythm around shared KPIs, attribution and decision-ready reporting so teams could move from questions to action faster.",
-    metrics: [{ value: "+50%", label: "reporting efficiency" }],
+    category: "Journey optimisation",
+    title: "Finding and reducing friction in the user journey",
+    businessProblem:
+      "The team could see registrations and returning users, but fragmented journey data made it difficult to locate friction or distinguish short-term conversion from durable product value.",
+    analyticalQuestion:
+      "Where were users dropping out, which behaviours were associated with continued use, and how should proposed changes be evaluated without relying on one headline metric?",
+    responsibility:
+      "I focused on measurement and interpretation: defining journey events, breaking down the funnel, analysing cohorts and helping teams read experiment outcomes responsibly.",
+    approach: [
+      "Mapped the journey from awareness and onboarding through activation, repeated engagement, retention and churn.",
+      "Defined Firebase events and properties so product behaviour could be analysed consistently across funnel and cohort views.",
+      "Supported cross-functional A/B testing with primary measures and downstream indicators, without claiming ownership of engineering implementation.",
+    ],
+    action:
+      "The evidence helped product, design, engineering and marketing focus follow-up work on measurable journey friction and monitor whether improvements held beyond registration.",
+    evaluation:
+      "The wider programme contributed to an 18% increase in registration and a 23% improvement in one-month retention. These are team outcomes, not effects attributed to analysis alone.",
+    learning:
+      "Success measures and guardrails should be agreed before reviewing a result, followed by a longer post-change check for activation and retention quality.",
+    metrics: [
+      { value: "+18%", label: "registration" },
+      { value: "+23%", label: "one-month retention" },
+    ],
     capabilities: [
-      "KPI frameworks",
-      "Attribution",
-      "Reporting automation",
-      "Stakeholder alignment",
+      "Funnel analysis",
+      "Event tracking",
+      "Cohort analysis",
+      "Experiment interpretation",
     ],
   },
   {
     number: "03",
-    category: "Process optimisation",
-    title: "Using experimentation to unlock manufacturing performance",
-    summary:
-      "Translated production data into testable improvement opportunities, helping technical and operational teams raise output while controlling cost.",
+    category: "Commercial measurement",
+    title: "Connecting acquisition spend to user value",
+    businessProblem:
+      "Campaign cost, product events and purchase behaviour lived in separate systems, so low-cost acquisition could look successful without showing whether those users engaged, retained or converted.",
+    analyticalQuestion:
+      "Which channels brought users who created downstream value, and how could recurring reporting become reliable enough to support faster budget conversations?",
+    responsibility:
+      "I aligned metric definitions, connected product and commercial data, organised reusable transformation logic and communicated attribution limits alongside recommendations.",
+    approach: [
+      "Linked Firebase behaviour and Redshift purchase data with BigQuery, Meta Ads and RevenueCat sources.",
+      "Compared channels across registration, engagement, retention and conversion rather than optimising top-of-funnel volume alone.",
+      "Used DolphinScheduler and dbt to automate recurring preparation, with checks for freshness, completeness, duplicates and unexpected volume changes.",
+    ],
+    action:
+      "Campaign reviews could consider user quality alongside cost, while the automated workflow moved analyst time from file preparation towards interpretation and decision support.",
+    evaluation:
+      "Subsequent team action was associated with a 25% reduction in cost per acquisition, while reporting automation improved efficiency by 50%. A dashboard alone did not cause either result.",
+    learning:
+      "Commercial measurement is most useful when attribution uncertainty is explicit and pipeline validity is tested independently from whether a scheduled job completed.",
     metrics: [
-      { value: "+70%", label: "production yield" },
-      { value: "+30%", label: "process improvement" },
-      { value: "$1M", label: "cost reduction" },
+      { value: "-25%", label: "cost per acquisition" },
+      { value: "+50%", label: "reporting efficiency" },
     ],
     capabilities: [
-      "Statistical analysis",
-      "Experiment design",
-      "Process analytics",
-      "Operational insight",
+      "Marketing attribution",
+      "Behavioural cohorts",
+      "Data modelling",
+      "Quality controls",
     ],
   },
 ];
@@ -152,11 +199,11 @@ export const experience: ExperienceItem[] = [
     location: "London, UK",
     period: "Jan 2026 — Present",
     summary:
-      "Lead product and growth analytics, turning behavioural data into product priorities, experiments and shared measures of success.",
+      "Lead decision support for product launch and early growth, connecting user evidence with roadmap priorities and shared measures of success.",
     highlights: [
-      "Promoted from Data Analyst to lead the product analytics function.",
-      "Partner with product, growth and leadership teams to connect evidence with roadmap decisions.",
-      "Shape KPI frameworks, user-journey analysis and experimentation from question through recommendation.",
+      "Combined user feedback, market research and early performance signals to structure product opportunity assessments.",
+      "Defined launch measures and decision points so major features could be evaluated against user and business outcomes.",
+      "Worked across product, design, engineering and marketing on priorities that supported a team launch outcome of 30K user acquisitions in five weeks.",
     ],
   },
   {
@@ -165,11 +212,11 @@ export const experience: ExperienceItem[] = [
     location: "London, UK",
     period: "Jul 2024 — Jan 2026",
     summary:
-      "Built the measurement foundation for product launches, acquisition and retention, making performance visible and actionable.",
+      "Turned fragmented product and marketing data into journey analysis, experiment readouts and reporting systems that teams could act on.",
     highlights: [
-      "Supported a launch that acquired 30K users in five weeks.",
-      "Helped lift registration by 18%, key-event engagement by 12% and one-month retention by 23%.",
-      "Reduced cost per acquisition by 25% and improved reporting efficiency by 50%.",
+      "Designed Firebase event tracking across onboarding, engagement, retention and churn, enabling more reliable funnel and cohort analysis.",
+      "Measurement and interpretation work contributed to team outcomes of +18% registration, +12% key-event engagement and +23% one-month retention.",
+      "Connected acquisition sources with downstream behaviour and automated multi-source reporting; subsequent work was associated with -25% CPA and +50% reporting efficiency.",
     ],
   },
   {
@@ -178,11 +225,11 @@ export const experience: ExperienceItem[] = [
     location: "Taiwan",
     period: "May 2019 — Nov 2021",
     summary:
-      "Applied experimentation and process analytics to improve performance in a high-volume manufacturing environment.",
+      "Used statistical analysis and operational context to identify testable drivers of quality in a high-volume manufacturing environment.",
     highlights: [
-      "Improved production yield by 70% through data-led process optimisation.",
-      "Delivered a 30% process improvement by translating operational data into testable actions.",
-      "Contributed to $1M in cost reduction through evidence-based production decisions.",
+      "Prepared production and IoT sensor data with SQL and Python, checking data quality before comparing process conditions.",
+      "Used control charts, regression, correlation analysis and statistical testing to narrow plausible quality drivers with process experts.",
+      "Supported structured process trials and built Tableau monitoring for ongoing variation, anomaly and quality review.",
     ],
   },
   {
@@ -191,10 +238,10 @@ export const experience: ExperienceItem[] = [
     location: "Taiwan",
     period: "Sep 2018 — Mar 2019",
     summary:
-      "Connected customer behaviour and commercial data to clear recommendations for digital growth.",
+      "Connected browsing behaviour, commercial measures and management reporting to clearer digital-growth decisions.",
     highlights: [
-      "Analysed the website journey to identify opportunities across discovery and conversion.",
-      "Helped increase website sales by 15% through insight-led improvements.",
+      "Built Power BI reporting from BigQuery data for non-technical management audiences.",
+      "Journey and KPI analysis informed website improvements associated with a 15% increase in sales.",
     ],
   },
 ];
@@ -203,21 +250,21 @@ export const projects: Project[] = [
   {
     title: "Fantasy Recommendation",
     description:
-      "A Streamlit app that uses league settings, weighted statistics and recent performance to recommend the strongest available fantasy-basketball players.",
+      "Decision: which available player best fits a specific fantasy roster? The app combines league settings, weighted statistics and recent performance into a practical shortlist.",
     url: "https://github.com/slashhsu/Fantasy-Recommendation",
     tags: ["Recommendation systems", "Streamlit", "Python"],
   },
   {
     title: "NLP Fake News",
     description:
-      "A natural-language-processing project that compares classification approaches for distinguishing authentic and misleading content.",
+      "Question: which text signals help distinguish authentic from misleading content? The project compares preprocessing, features and classification approaches in a reproducible workflow.",
     url: "https://github.com/slashhsu/NLP-Fake-news-predict",
     tags: ["Natural language processing", "Classification", "Python"],
   },
   {
     title: "Yahoo Fantasy Basketball",
     description:
-      "A notebook-led workflow for weekly matchup reporting, player analysis and clearer roster decisions.",
+      "Decision: where can a roster gain an advantage in the next matchup? The notebook turns weekly player and category data into a repeatable review for roster choices.",
     url: "https://github.com/slashhsu/Yahoo-fantasy-basketball-Jupyter",
     tags: ["Sports analytics", "Data exploration", "Jupyter"],
   },
@@ -225,71 +272,54 @@ export const projects: Project[] = [
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Product & growth",
+    title: "Product decisions",
     skills: [
-      "Product analytics",
-      "Growth analytics",
-      "Funnel analysis",
-      "Cohort analysis",
-      "Attribution",
       "KPI frameworks",
-      "Cross-functional leadership",
+      "Opportunity assessment",
+      "Journey optimisation",
+      "Growth analytics",
+      "Marketing attribution",
+      "Roadmap support",
+      "Stakeholder alignment",
     ],
   },
   {
-    title: "Experimentation",
+    title: "Experimentation & analysis",
     skills: [
       "A/B testing",
       "Hypothesis design",
+      "Funnel analysis",
+      "Cohort analysis",
+      "User segmentation",
       "Statistical analysis",
-      "Retention analysis",
-      "User-journey analysis",
       "Insight synthesis",
     ],
   },
   {
-    title: "Data engineering",
+    title: "Data foundations",
     skills: [
       "SQL",
       "Python",
-      "PySpark",
       "dbt",
       "Data modelling",
       "Data quality",
       "ETL pipelines",
+      "Event tracking",
+      "PySpark",
     ],
   },
   {
-    title: "BI & visualisation",
+    title: "Platforms & communication",
     skills: [
       "Tableau",
       "Power BI",
       "Streamlit",
       "Looker",
-      "Dashboard design",
-      "Insight storytelling",
-    ],
-  },
-  {
-    title: "Cloud & platforms",
-    skills: [
       "BigQuery",
       "Redshift",
-      "OpenSearch",
-      "Azure Synapse",
-      "Databricks",
       "Firebase",
-    ],
-  },
-  {
-    title: "Leadership",
-    skills: [
-      "Product strategy",
-      "Stakeholder communication",
-      "Roadmap support",
-      "Decision frameworks",
-      "Team leadership",
-      "Go-to-market analysis",
+      "Dashboard design",
+      "Insight storytelling",
     ],
   },
 ];
