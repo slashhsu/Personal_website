@@ -66,7 +66,7 @@ const structuredData = {
   name: "Han-Ling Hsu",
   url: siteUrl,
   image: `${siteUrl}/profile-cutout.webp`,
-  jobTitle: "Product Analytics Lead",
+  jobTitle: "Senior Product Analyst",
   email: "mailto:hanlinghsu300@gmail.com",
   address: {
     "@type": "PostalAddress",
@@ -85,13 +85,14 @@ const structuredData = {
   ],
   sameAs: contactLinks.map((link) => link.href),
   knowsAbout: [
+    "AI product measurement",
     "Product analytics",
-    "Growth analytics",
     "Experimentation",
-    "User behaviour",
+    "Causal evaluation",
+    "Subscription analytics",
+    "Lifetime value analysis",
     "SQL",
     "Python",
-    "Business intelligence",
   ],
 };
 
@@ -103,14 +104,14 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Han-Ling Hsu | Product Analytics Lead</title>
+        <title>Han-Ling Hsu | Senior Product Analyst</title>
         <meta
           name="description"
-          content="Product Analytics Lead in London turning user behaviour, experimentation and reliable measurement into evidence teams can act on."
+          content="Senior Product Analyst in London leading AI product measurement, experimentation and subscription analytics to support decisions teams can act on."
         />
         <meta
           name="keywords"
-          content="Han-Ling Hsu, Product Analyst, Growth Analytics, Data Analyst, Product Analytics, London"
+          content="Han-Ling Hsu, Senior Product Analyst, AI Product Analytics, Experimentation, Subscription Analytics, Causal Inference, London"
         />
         <meta name="author" content="Han-Ling Hsu" />
         <meta name="robots" content="index, follow" />
@@ -123,7 +124,7 @@ export default function Home() {
         <meta property="og:url" content={`${siteUrl}/`} />
         <meta
           property="og:title"
-          content="Han-Ling Hsu | Product Analytics Lead"
+          content="Han-Ling Hsu | Senior Product Analyst"
         />
         <meta
           property="og:description"
@@ -135,13 +136,13 @@ export default function Home() {
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="Han-Ling Hsu — Product Analytics Lead"
+          content="Han-Ling Hsu — Senior Product Analyst"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Han-Ling Hsu | Product Analytics Lead"
+          content="Han-Ling Hsu | Senior Product Analyst"
         />
         <meta
           name="twitter:description"
@@ -150,7 +151,7 @@ export default function Home() {
         <meta name="twitter:image" content={`${siteUrl}/og-decision.png`} />
         <meta
           name="twitter:image:alt"
-          content="Han-Ling Hsu — Product Analytics Lead"
+          content="Han-Ling Hsu — Senior Product Analyst"
         />
       </Head>
 
@@ -167,7 +168,7 @@ export default function Home() {
             <span className="brand-text">
               Han-Ling Hsu
               <br />
-              Product Analytics
+              Senior Product Analyst
             </span>
             <span className="sr-only">, home</span>
           </a>
@@ -206,15 +207,15 @@ export default function Home() {
           <div className="hero-copy">
             <p className="hero-role">
               <span className="hero-role-dot" aria-hidden="true" />
-              Product Analytics Lead · London, UK
+              Senior Product Analyst · AI Product Measurement · London, UK
             </p>
             <h1 id="hero-title">
               I turn product questions into <em>evidence</em> teams can act on.
             </h1>
             <p className="hero-lede">
-              Across consumer apps and complex operations, I connect user
-              behaviour, experimentation and reliable measurement to clearer
-              priorities and measurable growth.
+              I lead analytics for AI products, turning behavioural data,
+              experimentation and subscription signals into ship-or-iterate
+              decisions, roadmap priorities and measurable growth.
             </p>
             <div className="hero-actions">
               <MicroLink
@@ -233,9 +234,9 @@ export default function Home() {
               </MicroLink>
             </div>
             <div className="hero-proof" aria-label="Experience focus">
-              <span>User behaviour</span>
+              <span>AI product measurement</span>
               <span>Experimentation</span>
-              <span>Decision systems</span>
+              <span>Subscription &amp; LTV</span>
             </div>
           </div>
 
@@ -672,9 +673,9 @@ export default function Home() {
                 Building a product decision that needs <em>better evidence?</em>
               </h2>
               <p className="contact-copy">
-                I&apos;m open to Product Analytics and Senior Product Analyst
-                opportunities in the UK, as well as conversations about growth,
-                experimentation and analytics leadership.
+                I&apos;m open to Senior Product Analyst and Product Analytics
+                opportunities in the UK, as well as conversations about AI
+                product measurement, experimentation and subscription growth.
               </p>
             </div>
             <div className="contact-links">

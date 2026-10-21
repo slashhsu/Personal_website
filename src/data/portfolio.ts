@@ -75,148 +75,146 @@ export const navItems: NavItem[] = [
 
 export const impactMetrics: ImpactMetric[] = [
   {
-    value: "30K",
-    label: "user acquisitions",
-    detail: "A team launch outcome achieved within the product's first five weeks.",
+    value: "30K+",
+    label: "users acquired",
+    detail: "A team launch outcome reached within the product's first five weeks.",
   },
   {
-    value: "+18%",
-    label: "registration uplift",
-    detail: "A journey-analysis and experimentation outcome I helped measure and interpret.",
+    value: "+9%",
+    label: "subscription revenue",
+    detail: "Subscription and LTV analysis informed paywall, retention and channel decisions.",
   },
   {
-    value: "-25%",
-    label: "cost per acquisition",
-    detail: "Connected channel cost with downstream product behaviour to inform optimisation.",
+    value: "30+",
+    label: "approved PRDs evaluated",
+    detail: "Experiment specifications clarified outcomes, diagnostics and quality guardrails.",
   },
   {
-    value: "+50%",
-    label: "reporting efficiency",
-    detail: "Automated recurring data preparation while improving consistency and visibility.",
+    value: "+12%",
+    label: "key-event engagement",
+    detail: "Segmentation and personalisation work contributed to stronger engagement.",
   },
 ];
 
 export const caseStudies: CaseStudy[] = [
   {
     number: "01",
-    category: "Launch strategy",
-    title: "Creating a measurable launch strategy",
+    category: "Launch & early growth",
+    title: "Launching and measuring early product growth",
     businessProblem:
-      "A new social product was approaching launch without a shared definition of success or a clear way to separate acquisition volume from meaningful user value.",
+      "A new consumer product needed a shared view of its value proposition, onboarding friction and early growth performance before the team could prioritise its next moves.",
     analyticalQuestion:
-      "Which early behaviours would show that users were reaching value, and which signals should guide onboarding, roadmap and go-to-market priorities?",
+      "Which early behaviours indicated that users were reaching value, where was the journey breaking down and which signals should shape launch priorities?",
     responsibility:
-      "I translated user needs and strategic goals into measurable product questions, tracking requirements and decision points for the cross-functional team.",
+      "I led the measurement strategy across acquisition, activation, AI interaction quality, engagement and retention, bringing research and behavioural evidence into one decision frame.",
     approach: [
-      "Combined recurring user feedback with market research and the early product signals available.",
-      "Mapped acquisition, activation, engagement and retention as distinct stages rather than treating registration as proof of success.",
-      "Aligned product, design, engineering and marketing on measures for the major launch features.",
+      "Combined user research, market evidence, acquisition data and early product signals.",
+      "Evaluated the value proposition and onboarding journey alongside initial growth performance.",
+      "Identified early friction and behavioural patterns, then translated them into launch recommendations.",
     ],
     action:
-      "The framework gave the team a shared basis for prioritising onboarding, core social actions and go-to-market activity while keeping uncertainty visible.",
+      "The evidence helped Product, Engineering, Machine Learning, UI/UX and Growth align onboarding and roadmap priorities around measurable user behaviour.",
     evaluation:
-      "The launch acquired more than 30,000 users in five weeks. I present that as a team outcome to which the analysis and measurement framework contributed.",
+      "The cross-functional launch acquired more than 30,000 users within five weeks. The analysis informed priorities; it is not presented as the sole cause of that team outcome.",
     learning:
-      "In an early-stage product, useful analytics means making assumptions explicit and defining activation and retention early enough to improve the next decision.",
-    metrics: [{ value: "30K", label: "users in five weeks" }],
+      "Early-growth analytics is most useful when value, friction and downstream quality are assessed together rather than treating acquisition volume as success by itself.",
+    metrics: [{ value: "30K+", label: "users in five weeks" }],
     capabilities: [
-      "Launch measurement",
-      "KPI definition",
-      "Roadmap support",
+      "AI product measurement",
+      "Launch evaluation",
+      "Funnel analysis",
       "Cross-functional alignment",
     ],
   },
   {
     number: "02",
-    category: "Journey optimisation",
-    title: "Finding and reducing friction in the user journey",
+    category: "Subscription & LTV",
+    title: "Connecting subscription behaviour to lifetime value",
     businessProblem:
-      "The team could see registrations and returning users, but fragmented journey data made it difficult to locate friction or distinguish short-term conversion from durable product value.",
+      "Subscription, product behaviour, purchase records and acquisition data were split across systems, limiting the team's view of durable value across five applications.",
     analyticalQuestion:
-      "Where were users dropping out, which behaviours were associated with continued use, and how should proposed changes be evaluated without relying on one headline metric?",
+      "Which plans, channels and user segments converted from trial, renewed and generated lifetime value with an acceptable CAC payback period?",
     responsibility:
-      "I focused on measurement and interpretation: defining journey events, breaking down the funnel, analysing cohorts and helping teams read experiment outcomes responsibly.",
+      "I built a unified subscription analytics layer, developed cohort-based analyses and automated recurring reporting for product and commercial decisions.",
     approach: [
-      "Mapped the journey from awareness and onboarding through activation, repeated engagement, retention and churn.",
-      "Defined Firebase events and properties so product behaviour could be analysed consistently across funnel and cohort views.",
-      "Supported cross-functional A/B testing with primary measures and downstream indicators, without claiming ownership of engineering implementation.",
+      "Integrated RevenueCat subscription data with Firebase events, Redshift purchase records and acquisition sources.",
+      "Analysed trial-to-paid conversion, renewal, churn, LTV and CAC payback by plan, channel and segment.",
+      "Automated recurring views so teams could review subscription quality consistently across five applications.",
     ],
     action:
-      "The evidence helped product, design, engineering and marketing focus follow-up work on measurable journey friction and monitor whether improvements held beyond registration.",
+      "The resulting evidence informed paywall, retention and channel-investment decisions while keeping acquisition cost connected to downstream customer value.",
     evaluation:
-      "The wider programme contributed to an 18% increase in registration and a 23% improvement in one-month retention. These are team outcomes, not effects attributed to analysis alone.",
+      "The wider programme contributed to a 9% increase in subscription revenue. This is presented as a cross-functional outcome supported by the analysis, not as an effect caused by reporting alone.",
     learning:
-      "Success measures and guardrails should be agreed before reviewing a result, followed by a longer post-change check for activation and retention quality.",
+      "Subscription growth should be evaluated through conversion, renewal and payback together; a cheaper trial or registration does not necessarily create better customer value.",
     metrics: [
-      { value: "+18%", label: "registration" },
-      { value: "+23%", label: "one-month retention" },
+      { value: "+9%", label: "subscription revenue" },
+      { value: "5", label: "applications unified" },
     ],
     capabilities: [
-      "Funnel analysis",
-      "Event tracking",
+      "Subscription analytics",
       "Cohort analysis",
-      "Experiment interpretation",
+      "LTV & CAC payback",
+      "Data integration",
     ],
   },
   {
     number: "03",
-    category: "Commercial measurement",
-    title: "Connecting acquisition spend to user value",
+    category: "Experimentation",
+    title: "Building experimentation into product decisions",
     businessProblem:
-      "Campaign cost, product events and purchase behaviour lived in separate systems, so low-cost acquisition could look successful without showing whether those users engaged, retained or converted.",
+      "Approved product requirements needed consistent evaluation plans so teams could distinguish feature impact from channel, segment, platform and timing effects.",
     analyticalQuestion:
-      "Which channels brought users who created downstream value, and how could recurring reporting become reliable enough to support faster budget conversations?",
+      "What incremental change should each feature create, how should that change be measured and which quality signals should determine whether to ship or iterate?",
     responsibility:
-      "I aligned metric definitions, connected product and commercial data, organised reusable transformation logic and communicated attribution limits alongside recommendations.",
+      "I developed experiment and evaluation specifications for more than 30 approved PRDs, then designed and analysed A/B tests and causal-inference-informed evaluations.",
     approach: [
-      "Linked Firebase behaviour and Redshift purchase data with BigQuery, Meta Ads and RevenueCat sources.",
-      "Compared channels across registration, engagement, retention and conversion rather than optimising top-of-funnel volume alone.",
-      "Used DolphinScheduler and dbt to automate recurring preparation, with checks for freshness, completeness, duplicates and unexpected volume changes.",
+      "Defined the hypothesis, exposure event, primary outcome, diagnostic measures and product-quality guardrails before reviewing results.",
+      "Compared treatment and control outcomes across acquisition channel, user segment, platform and observation window.",
+      "Used causal-inference principles to estimate incremental feature impact while making limitations visible to stakeholders.",
     ],
     action:
-      "Campaign reviews could consider user quality alongside cost, while the automated workflow moved analyst time from file preparation towards interpretation and decision support.",
+      "Product and cross-functional partners received a consistent evidence base for roadmap recommendations and ship-or-iterate decisions.",
     evaluation:
-      "Subsequent team action was associated with a 25% reduction in cost per acquisition, while reporting automation improved efficiency by 50%. A dashboard alone did not cause either result.",
+      "More than 30 approved PRDs received structured evaluation specifications. No unsupported treatment effect, sample size or significance result is claimed.",
     learning:
-      "Commercial measurement is most useful when attribution uncertainty is explicit and pipeline validity is tested independently from whether a scheduled job completed.",
-    metrics: [
-      { value: "-25%", label: "cost per acquisition" },
-      { value: "+50%", label: "reporting efficiency" },
-    ],
+      "Experiment quality improves when success, diagnostic signals and product guardrails are defined before exposure, rather than selected after the result is visible.",
+    metrics: [{ value: "30+", label: "approved PRDs evaluated" }],
     capabilities: [
-      "Marketing attribution",
-      "Behavioural cohorts",
-      "Data modelling",
-      "Quality controls",
+      "Experiment specifications",
+      "A/B testing",
+      "Causal evaluation",
+      "Product-quality guardrails",
     ],
   },
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Product Analyst Lead",
+    role: "Senior Product Analyst",
     company: "Frog Social / Novum Studio",
     location: "London, UK",
     period: "Jan 2026 — Present",
     summary:
-      "Lead decision support for product launch and early growth, connecting user evidence with roadmap priorities and shared measures of success.",
+      "Lead analytics for AI products across acquisition, activation, AI interaction quality, engagement and retention for a consumer mobile app portfolio with 6M+ downloads.",
     highlights: [
-      "Combined user feedback, market research and early performance signals to structure product opportunity assessments.",
-      "Defined launch measures and decision points so major features could be evaluated against user and business outcomes.",
-      "Worked across product, design, engineering and marketing on priorities that supported a team launch outcome of 30K user acquisitions in five weeks.",
+      "Own measurement strategy and partner with Product, Engineering, Machine Learning, UI/UX and Growth to turn behavioural evidence into roadmap recommendations.",
+      "Combined research, market evidence, acquisition data and early signals to inform launch priorities that supported a team outcome of 30K+ users in five weeks.",
+      "Built subscription and LTV analysis across five applications, contributing to a 9% increase in subscription revenue.",
+      "Developed experiment and evaluation specifications for 30+ approved PRDs to support ship-or-iterate decisions.",
     ],
   },
   {
-    role: "Data Analyst",
+    role: "Senior Data Analyst",
     company: "Frog Social / Novum Studio",
     location: "London, UK",
     period: "Jul 2024 — Jan 2026",
     summary:
-      "Turned fragmented product and marketing data into journey analysis, experiment readouts and reporting systems that teams could act on.",
+      "Turned product, marketing and event data into KPI frameworks, behavioural analysis and reliable self-serve reporting.",
     highlights: [
-      "Designed Firebase event tracking across onboarding, engagement, retention and churn, enabling more reliable funnel and cohort analysis.",
-      "Measurement and interpretation work contributed to team outcomes of +18% registration, +12% key-event engagement and +23% one-month retention.",
-      "Connected acquisition sources with downstream behaviour and automated multi-source reporting; subsequent work was associated with -25% CPA and +50% reporting efficiency.",
+      "Defined product KPIs and worked with Kochava to improve iOS marketing measurement across social platforms.",
+      "Segmentation and personalisation work contributed to +12% key-event engagement; Firebase journey tracking supported feature strategies associated with +23% one-month retention.",
+      "Automated data from BigQuery, Meta Ads, RevenueCat and Redshift with DolphinScheduler and dbt, delivering a +50% improvement in reporting efficiency while strengthening data checks.",
     ],
   },
   {
@@ -272,54 +270,55 @@ export const projects: Project[] = [
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Product decisions",
+    title: "AI product decisions",
     skills: [
+      "AI product measurement",
       "KPI frameworks",
-      "Opportunity assessment",
-      "Journey optimisation",
-      "Growth analytics",
-      "Marketing attribution",
-      "Roadmap support",
-      "Stakeholder alignment",
+      "Roadmap recommendations",
+      "Ship-or-iterate decisions",
+      "User behaviour",
+      "Cross-functional alignment",
     ],
   },
   {
-    title: "Experimentation & analysis",
+    title: "Experimentation & causal evaluation",
     skills: [
+      "Experiment specifications",
       "A/B testing",
+      "Causal inference principles",
       "Hypothesis design",
+      "Exposure events",
+      "Diagnostic metrics",
+      "Product-quality guardrails",
+    ],
+  },
+  {
+    title: "Subscription & behavioural analytics",
+    skills: [
       "Funnel analysis",
       "Cohort analysis",
+      "Trial-to-paid conversion",
+      "Renewal & churn",
+      "LTV & CAC payback",
       "User segmentation",
-      "Statistical analysis",
-      "Insight synthesis",
+      "Marketing attribution",
     ],
   },
   {
-    title: "Data foundations",
+    title: "Data foundations & communication",
     skills: [
       "SQL",
       "Python",
-      "dbt",
-      "Data modelling",
-      "Data quality",
-      "ETL pipelines",
-      "Event tracking",
-      "PySpark",
-    ],
-  },
-  {
-    title: "Platforms & communication",
-    skills: [
-      "Tableau",
-      "Power BI",
-      "Streamlit",
-      "Looker",
+      "Firebase",
+      "RevenueCat",
       "BigQuery",
       "Redshift",
-      "Firebase",
-      "Dashboard design",
-      "Insight storytelling",
+      "dbt",
+      "DolphinScheduler",
+      "Tableau",
+      "Power BI",
+      "Looker",
+      "Streamlit",
     ],
   },
 ];

@@ -1,6 +1,6 @@
 # Han-Ling Hsu — Professional Portfolio
 
-A professional portfolio presenting Han-Ling Hsu’s product, growth, and analytics experience through measurable outcomes, selected projects, and career history.
+A professional portfolio presenting Han-Ling Hsu’s Senior Product Analyst experience across AI product measurement, experimentation, subscription analytics, selected projects, and career history.
 
 Built with Next.js, TypeScript, and plain CSS. The site is self-contained and ready to deploy on Vercel.
 
