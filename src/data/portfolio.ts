@@ -18,7 +18,13 @@ export interface CaseStudy {
   number: string;
   category: string;
   title: string;
-  summary: string;
+  businessProblem: string;
+  analyticalQuestion: string;
+  responsibility: string;
+  approach: string[];
+  action: string;
+  evaluation: string;
+  learning: string;
   metrics: CaseStudyMetric[];
   capabilities: string[];
 }
@@ -60,103 +66,142 @@ export interface Credential {
 
 export const navItems: NavItem[] = [
   { label: "About", href: "#about" },
-  { label: "Impact", href: "#impact" },
+  { label: "Decision stories", href: "#work" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
+  { label: "Capabilities", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const impactMetrics: ImpactMetric[] = [
   {
-    value: "30K",
+    value: "30K+",
     label: "users acquired",
-    detail: "Built momentum in the first five weeks of a consumer product launch.",
+    detail: "A team launch outcome reached within the product's first five weeks.",
   },
   {
-    value: "+18%",
-    label: "registration uplift",
-    detail: "Improved the journey from first visit to completed registration.",
+    value: "+9%",
+    label: "subscription revenue",
+    detail: "Subscription and LTV analysis informed paywall, retention and channel decisions.",
   },
   {
-    value: "-25%",
-    label: "cost per acquisition",
-    detail: "Made growth spend work harder through measurement and optimisation.",
+    value: "30+",
+    label: "approved PRDs evaluated",
+    detail: "Experiment specifications clarified outcomes, diagnostics and quality guardrails.",
   },
   {
-    value: "+70%",
-    label: "production yield",
-    detail: "Applied experiment-led analysis to a complex manufacturing process.",
+    value: "+12%",
+    label: "key-event engagement",
+    detail: "Segmentation and personalisation work contributed to stronger engagement.",
   },
 ];
 
 export const caseStudies: CaseStudy[] = [
   {
     number: "01",
-    category: "Product growth",
-    title: "Turning a launch into a measurable growth engine",
-    summary:
-      "Connected acquisition, activation and retention signals to focus the team on the changes with the greatest customer and commercial value.",
-    metrics: [
-      { value: "30K", label: "users in five weeks" },
-      { value: "+18%", label: "registration" },
-      { value: "+12%", label: "key-event engagement" },
-      { value: "-25%", label: "cost per acquisition" },
-      { value: "+23%", label: "one-month retention" },
+    category: "Launch & early growth",
+    title: "Launching and measuring early product growth",
+    businessProblem:
+      "A new consumer product needed a shared view of its value proposition, onboarding friction and early growth performance before the team could prioritise its next moves.",
+    analyticalQuestion:
+      "Which early behaviours indicated that users were reaching value, where was the journey breaking down and which signals should shape launch priorities?",
+    responsibility:
+      "I led the measurement strategy across acquisition, activation, AI interaction quality, engagement and retention, bringing research and behavioural evidence into one decision frame.",
+    approach: [
+      "Combined user research, market evidence, acquisition data and early product signals.",
+      "Evaluated the value proposition and onboarding journey alongside initial growth performance.",
+      "Identified early friction and behavioural patterns, then translated them into launch recommendations.",
     ],
+    action:
+      "The evidence helped Product, Engineering, Machine Learning, UI/UX and Growth align onboarding and roadmap priorities around measurable user behaviour.",
+    evaluation:
+      "The cross-functional launch acquired more than 30,000 users within five weeks. The analysis informed priorities; it is not presented as the sole cause of that team outcome.",
+    learning:
+      "Early-growth analytics is most useful when value, friction and downstream quality are assessed together rather than treating acquisition volume as success by itself.",
+    metrics: [{ value: "30K+", label: "users in five weeks" }],
     capabilities: [
-      "Growth analytics",
-      "Journey optimisation",
-      "Experimentation",
-      "Retention",
+      "AI product measurement",
+      "Launch evaluation",
+      "Funnel analysis",
+      "Cross-functional alignment",
     ],
   },
   {
     number: "02",
-    category: "Measurement systems",
-    title: "Giving teams one dependable view of product performance",
-    summary:
-      "Created a practical measurement rhythm around shared KPIs, attribution and decision-ready reporting so teams could move from questions to action faster.",
-    metrics: [{ value: "+50%", label: "reporting efficiency" }],
+    category: "Subscription & LTV",
+    title: "Connecting subscription behaviour to lifetime value",
+    businessProblem:
+      "Subscription, product behaviour, purchase records and acquisition data were split across systems, limiting the team's view of durable value across five applications.",
+    analyticalQuestion:
+      "Which plans, channels and user segments converted from trial, renewed and generated lifetime value with an acceptable CAC payback period?",
+    responsibility:
+      "I built a unified subscription analytics layer, developed cohort-based analyses and automated recurring reporting for product and commercial decisions.",
+    approach: [
+      "Integrated RevenueCat subscription data with Firebase events, Redshift purchase records and acquisition sources.",
+      "Analysed trial-to-paid conversion, renewal, churn, LTV and CAC payback by plan, channel and segment.",
+      "Automated recurring views so teams could review subscription quality consistently across five applications.",
+    ],
+    action:
+      "The resulting evidence informed paywall, retention and channel-investment decisions while keeping acquisition cost connected to downstream customer value.",
+    evaluation:
+      "The wider programme contributed to a 9% increase in subscription revenue. This is presented as a cross-functional outcome supported by the analysis, not as an effect caused by reporting alone.",
+    learning:
+      "Subscription growth should be evaluated through conversion, renewal and payback together; a cheaper trial or registration does not necessarily create better customer value.",
+    metrics: [
+      { value: "+9%", label: "subscription revenue" },
+      { value: "5", label: "applications unified" },
+    ],
     capabilities: [
-      "KPI frameworks",
-      "Attribution",
-      "Reporting automation",
-      "Stakeholder alignment",
+      "Subscription analytics",
+      "Cohort analysis",
+      "LTV & CAC payback",
+      "Data integration",
     ],
   },
   {
     number: "03",
-    category: "Process optimisation",
-    title: "Using experimentation to unlock manufacturing performance",
-    summary:
-      "Translated production data into testable improvement opportunities, helping technical and operational teams raise output while controlling cost.",
-    metrics: [
-      { value: "+70%", label: "production yield" },
-      { value: "+30%", label: "process improvement" },
-      { value: "$1M", label: "cost reduction" },
+    category: "Experimentation",
+    title: "Building experimentation into product decisions",
+    businessProblem:
+      "Approved product requirements needed consistent evaluation plans so teams could distinguish feature impact from channel, segment, platform and timing effects.",
+    analyticalQuestion:
+      "What incremental change should each feature create, how should that change be measured and which quality signals should determine whether to ship or iterate?",
+    responsibility:
+      "I developed experiment and evaluation specifications for more than 30 approved PRDs, then designed and analysed A/B tests and causal-inference-informed evaluations.",
+    approach: [
+      "Defined the hypothesis, exposure event, primary outcome, diagnostic measures and product-quality guardrails before reviewing results.",
+      "Compared treatment and control outcomes across acquisition channel, user segment, platform and observation window.",
+      "Used causal-inference principles to estimate incremental feature impact while making limitations visible to stakeholders.",
     ],
+    action:
+      "Product and cross-functional partners received a consistent evidence base for roadmap recommendations and ship-or-iterate decisions.",
+    evaluation:
+      "More than 30 approved PRDs received structured evaluation specifications. No unsupported treatment effect, sample size or significance result is claimed.",
+    learning:
+      "Experiment quality improves when success, diagnostic signals and product guardrails are defined before exposure, rather than selected after the result is visible.",
+    metrics: [{ value: "30+", label: "approved PRDs evaluated" }],
     capabilities: [
-      "Statistical analysis",
-      "Experiment design",
-      "Process analytics",
-      "Operational insight",
+      "Experiment specifications",
+      "A/B testing",
+      "Causal evaluation",
+      "Product-quality guardrails",
     ],
   },
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Product Analyst Lead",
+    role: "Senior Product Analyst",
     company: "Frog Social / Novum Studio",
     location: "London, UK",
     period: "Jan 2026 — Present",
     summary:
-      "Lead product and growth analytics, turning behavioural data into product priorities, experiments and shared measures of success.",
+      "Lead analytics for AI products across acquisition, activation, AI interaction quality, engagement and retention for a consumer mobile app portfolio with 6M+ downloads.",
     highlights: [
-      "Promoted from Data Analyst to lead the product analytics function.",
-      "Partner with product, growth and leadership teams to connect evidence with roadmap decisions.",
-      "Shape KPI frameworks, user-journey analysis and experimentation from question through recommendation.",
+      "Own measurement strategy and partner with Product, Engineering, Machine Learning, UI/UX and Growth to turn behavioural evidence into roadmap recommendations.",
+      "Combined research, market evidence, acquisition data and early signals to inform launch priorities that supported a team outcome of 30K+ users in five weeks.",
+      "Built subscription and LTV analysis across five applications, contributing to a 9% increase in subscription revenue.",
+      "Developed experiment and evaluation specifications for 30+ approved PRDs to support ship-or-iterate decisions.",
     ],
   },
   {
@@ -165,11 +210,11 @@ export const experience: ExperienceItem[] = [
     location: "London, UK",
     period: "Jul 2024 — Jan 2026",
     summary:
-      "Built the measurement foundation for product launches, acquisition and retention, making performance visible and actionable.",
+      "Turned product, marketing and event data into KPI frameworks, behavioural analysis and reliable self-serve reporting.",
     highlights: [
-      "Supported a launch that acquired 30K users in five weeks.",
-      "Helped lift registration by 18%, key-event engagement by 12% and one-month retention by 23%.",
-      "Reduced cost per acquisition by 25% and improved reporting efficiency by 50%.",
+      "Defined product KPIs and worked with Kochava to improve iOS marketing measurement across social platforms.",
+      "Segmentation and personalisation work contributed to +12% key-event engagement; Firebase journey tracking supported feature strategies associated with +23% one-month retention.",
+      "Automated data from BigQuery, Meta Ads, RevenueCat and Redshift with DolphinScheduler and dbt, delivering a +50% improvement in reporting efficiency while strengthening data checks.",
     ],
   },
   {
@@ -178,11 +223,11 @@ export const experience: ExperienceItem[] = [
     location: "Taiwan",
     period: "May 2019 — Nov 2021",
     summary:
-      "Applied experimentation and process analytics to improve performance in a high-volume manufacturing environment.",
+      "Used statistical analysis and operational context to identify testable drivers of quality in a high-volume manufacturing environment.",
     highlights: [
-      "Improved production yield by 70% through data-led process optimisation.",
-      "Delivered a 30% process improvement by translating operational data into testable actions.",
-      "Contributed to $1M in cost reduction through evidence-based production decisions.",
+      "Prepared production and IoT sensor data with SQL and Python, checking data quality before comparing process conditions.",
+      "Used control charts, regression, correlation analysis and statistical testing to narrow plausible quality drivers with process experts.",
+      "Supported structured process trials and built Tableau monitoring for ongoing variation, anomaly and quality review.",
     ],
   },
   {
@@ -191,10 +236,10 @@ export const experience: ExperienceItem[] = [
     location: "Taiwan",
     period: "Sep 2018 — Mar 2019",
     summary:
-      "Connected customer behaviour and commercial data to clear recommendations for digital growth.",
+      "Connected browsing behaviour, commercial measures and management reporting to clearer digital-growth decisions.",
     highlights: [
-      "Analysed the website journey to identify opportunities across discovery and conversion.",
-      "Helped increase website sales by 15% through insight-led improvements.",
+      "Built Power BI reporting from BigQuery data for non-technical management audiences.",
+      "Journey and KPI analysis informed website improvements associated with a 15% increase in sales.",
     ],
   },
 ];
@@ -203,21 +248,21 @@ export const projects: Project[] = [
   {
     title: "Fantasy Recommendation",
     description:
-      "A Streamlit app that uses league settings, weighted statistics and recent performance to recommend the strongest available fantasy-basketball players.",
+      "Decision: which available player best fits a specific fantasy roster? The app combines league settings, weighted statistics and recent performance into a practical shortlist.",
     url: "https://github.com/slashhsu/Fantasy-Recommendation",
     tags: ["Recommendation systems", "Streamlit", "Python"],
   },
   {
     title: "NLP Fake News",
     description:
-      "A natural-language-processing project that compares classification approaches for distinguishing authentic and misleading content.",
+      "Question: which text signals help distinguish authentic from misleading content? The project compares preprocessing, features and classification approaches in a reproducible workflow.",
     url: "https://github.com/slashhsu/NLP-Fake-news-predict",
     tags: ["Natural language processing", "Classification", "Python"],
   },
   {
     title: "Yahoo Fantasy Basketball",
     description:
-      "A notebook-led workflow for weekly matchup reporting, player analysis and clearer roster decisions.",
+      "Decision: where can a roster gain an advantage in the next matchup? The notebook turns weekly player and category data into a repeatable review for roster choices.",
     url: "https://github.com/slashhsu/Yahoo-fantasy-basketball-Jupyter",
     tags: ["Sports analytics", "Data exploration", "Jupyter"],
   },
@@ -225,71 +270,55 @@ export const projects: Project[] = [
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Product & growth",
+    title: "AI product decisions",
     skills: [
-      "Product analytics",
-      "Growth analytics",
+      "AI product measurement",
+      "KPI frameworks",
+      "Roadmap recommendations",
+      "Ship-or-iterate decisions",
+      "User behaviour",
+      "Cross-functional alignment",
+    ],
+  },
+  {
+    title: "Experimentation & causal evaluation",
+    skills: [
+      "Experiment specifications",
+      "A/B testing",
+      "Causal inference principles",
+      "Hypothesis design",
+      "Exposure events",
+      "Diagnostic metrics",
+      "Product-quality guardrails",
+    ],
+  },
+  {
+    title: "Subscription & behavioural analytics",
+    skills: [
       "Funnel analysis",
       "Cohort analysis",
-      "Attribution",
-      "KPI frameworks",
-      "Cross-functional leadership",
+      "Trial-to-paid conversion",
+      "Renewal & churn",
+      "LTV & CAC payback",
+      "User segmentation",
+      "Marketing attribution",
     ],
   },
   {
-    title: "Experimentation",
-    skills: [
-      "A/B testing",
-      "Hypothesis design",
-      "Statistical analysis",
-      "Retention analysis",
-      "User-journey analysis",
-      "Insight synthesis",
-    ],
-  },
-  {
-    title: "Data engineering",
+    title: "Data foundations & communication",
     skills: [
       "SQL",
       "Python",
-      "PySpark",
-      "dbt",
-      "Data modelling",
-      "Data quality",
-      "ETL pipelines",
-    ],
-  },
-  {
-    title: "BI & visualisation",
-    skills: [
-      "Tableau",
-      "Power BI",
-      "Streamlit",
-      "Looker",
-      "Dashboard design",
-      "Insight storytelling",
-    ],
-  },
-  {
-    title: "Cloud & platforms",
-    skills: [
+      "Firebase",
+      "RevenueCat",
       "BigQuery",
       "Redshift",
-      "OpenSearch",
-      "Azure Synapse",
-      "Databricks",
-      "Firebase",
-    ],
-  },
-  {
-    title: "Leadership",
-    skills: [
-      "Product strategy",
-      "Stakeholder communication",
-      "Roadmap support",
-      "Decision frameworks",
-      "Team leadership",
-      "Go-to-market analysis",
+      "dbt",
+      "DolphinScheduler",
+      "Tableau",
+      "Power BI",
+      "Looker",
+      "Streamlit",
     ],
   },
 ];
