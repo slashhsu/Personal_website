@@ -205,7 +205,7 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    role: "Senior Data Analyst",
+    role: "Data Analyst",
     company: "Frog Social / Novum Studio",
     location: "London, UK",
     period: "Jul 2024 — Jan 2026",
